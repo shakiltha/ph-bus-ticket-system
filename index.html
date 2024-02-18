@@ -60,7 +60,7 @@
         >
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 font-medium text-sm inter">
+        <ul class="menu menu-horizontal px-1 font-medium text-lg inter">
           <li><a>Home</a></li>
           <li><a>About</a></li>
           <li><a>Destination</a></li>
@@ -76,14 +76,14 @@
     <!-- navbar end -->
     <!-- header start -->
     <header class="">
-      <div>
+      <div class="lg:flex lg:justify-center lg:mb-28">
         <img
-          class="mx-auto my-3 header-img w-11/12 lg:w-full"
+          class="mx-auto my-3 contrast-125 w-11/12 lg:w-full"
           src="images/banner.png"
           alt="a bus"
         />
         <!-- end to end travel section -->
-        <div class="end-to-end mb-4 lg:relative lg:-top-96">
+        <div class="end-to-end mb-4 lg:absolute lg:top-96">
           <section>
             <h2
               class="raleway font-bold lg:font-extrabold text-2xl lg:text-5xl text-center lg:-mt-14 lg:text-white"
@@ -149,8 +149,61 @@
       <!-- header image -->
     </header>
     <!-- header end -->
-    <h3>hello</h3>
-    <h4>world</h4>
+    <!-- best offers section start -->
+    <section class="mb-20">
+      <h3 class="raleway font-bold text-4xl text-[#030712] text-center mb-5">
+        Best offers for you
+      </h3>
+      <div
+        class="flex flex-col lg:flex-row items-center lg:justify-center gap-4"
+      >
+        <!-- offer 1 -->
+        <div
+          class="w-11/12 h-40 lg:w-[32rem] lg:h-44 bg-[#ffbf0f] flex justify-center items-center rounded-3xl px-3"
+        >
+          <div class="inter">
+            <h3 class="font-black text-3xl lg:text-4xl">15% OFF</h3>
+            <p class="text-lg font-semibold">on purchasing 4 seat at once.</p>
+            <p class="text-base">this offer will last till july 2024.</p>
+          </div>
+          <img
+            class="h-40 lg:h-44"
+            src="images/cupon-devider.png"
+            alt="a divider between two div"
+          />
+          <div class="raleway">
+            <h4 class="text-2xl font-semibold">NEW15</h4>
+            <p class="text-base">Coupon Code</p>
+          </div>
+        </div>
+        <!-- offer 2 -->
+        <div
+          class="w-11/12 h-40 lg:w-[32rem] lg:h-44 bg-[#f78c9c] flex justify-center items-center rounded-3xl px-3"
+        >
+          <div class="inter">
+            <h3 class="font-black text-3xl lg:text-4xl">20% OFF</h3>
+            <p class="text-lg font-semibold">
+              this offer only available for married.
+            </p>
+            <p class="text-base">this offer will last till june 2024.</p>
+          </div>
+          <img
+            class="h-40 lg:h-44"
+            src="images/cupon-devider.png"
+            alt="a divider between two div"
+          />
+          <div class="raleway">
+            <h4 class="text-2xl font-semibold">NEW15</h4>
+            <p class="text-base">Coupon Code</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <button class="btn my-10 mx-auto">See All Offers</button>
+      </div>
+    </section>
+    <!-- best offers section end -->
+
     <script src="app.js"></script>
   </body>
 </html>
