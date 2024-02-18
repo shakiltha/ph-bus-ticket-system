@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: aliceblue;
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* header img */
+
+.header-img {
+    filter: contrast(1.25);
+}
+
+/* .header-card {
+    width: 19.25rem;
+    height: 8.625rem;
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+    border-bottom-color: #1dd100;
+    border-bottom-width: 2px;
+} */
