@@ -572,12 +572,16 @@
             <!-- coupon input field -->
             <div class="lg:text-center mb-6 -mt-2 ml-2 lg:mt-4">
               <input
+                id="coupon-input"
                 class="w-[13rem] lg:w-[23.0625rem] h-[3.3rem] pl-2 lg:ml-2 rounded-md"
                 type="text"
                 placeholder="Have any coupon?"
               />
               <button
+                onclick="my_modal_3.showModal()"
+                id="coupon-btn"
                 class="btn bg-[#1dd100] relative lg:-top-[3.3rem] left-2 lg:left-36 text-white hover:text-black"
+                disabled
               >
                 Apply
               </button>
@@ -632,7 +636,36 @@
       <!-- shohoz poribohon main functional section end -->
       <!-- shohoz poribohon functional section end -->
     </section>
-
+    <!-- dialog box -->
+    <dialog id="my_modal_3" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+          >
+            ✕
+          </button>
+        </form>
+        <div class="flex justify-center items-center flex-col gap-2">
+          <img src="images/success.png" alt="a success logo" />
+          <h4>SUCCESS</h4>
+          <h5 class="font-medium text-xl text-center">
+            Thank you for booking our bus tickets. <br />
+            We are working hard to find the best service and deals for you.
+          </h5>
+          <p class="font-normal text-base text-[#4a4a4a] text-center">
+            Shortly you will find a confirmation in your email
+          </p>
+          <button
+            class="btn text-white lg:w-[18.75rem] lg:h-[3.4375] bg-[#27ae60]"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <h5 class="inter font-bold text-2xl">hello fellow developer</h5>
     <script src="app.js"></script>
   </body>
 </html>
+<!-- NEW15  Couple 20 -->

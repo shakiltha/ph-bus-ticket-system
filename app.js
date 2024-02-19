@@ -8,6 +8,20 @@ const totalPrice = document.getElementById("total-price");
 const grandPrice = document.getElementById("grand-price");
 const inputNumber = document.getElementById("input-number");
 const nextBtn = document.getElementById("next-btn");
+const couponInput = document.getElementById("coupon-input");
+const couponBtn = document.getElementById("coupon-btn");
+
+couponInput.addEventListener("input", (e) => {
+  // console.log(e.target.value);
+  if (couponInput.value === "NEW15") {
+    couponBtn.removeAttribute("disabled");
+  } else if (couponInput.value === "Couple 20") {
+    couponBtn.removeAttribute("disabled");
+  } else {
+    couponBtn.setAttribute("disabled", "");
+    return;
+  }
+});
 
 function seatFunctionality(seatButtons) {
   let seatCount = 40;
@@ -26,7 +40,7 @@ function seatFunctionality(seatButtons) {
         }
 
         inputNumber.addEventListener("input", (e) => {
-          console.log(e.target.value);
+          e.preventDefault();
           if (
             inputNumber.value &&
             seatButtons[i].classList.contains("bg-[#1dd100]")
@@ -36,6 +50,7 @@ function seatFunctionality(seatButtons) {
             nextBtn.setAttribute("disabled", "");
           }
         });
+
         seatButtons[i].classList.remove("bg-[#F7F8F8]");
         seatButtons[i].classList.add("bg-[#1dd100]");
         seatCount--;
