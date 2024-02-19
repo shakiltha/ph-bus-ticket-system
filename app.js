@@ -55,6 +55,8 @@ function seatFunctionality(seatButtons) {
               discountPrice.textContent = discount;
               let grandTotal = priceCounter - discount;
               grandPrice.textContent = grandTotal;
+              couponInput.style.display = "none";
+              couponBtn.style.display = "none";
             });
             couponBtn.removeAttribute("disabled");
           } else {
