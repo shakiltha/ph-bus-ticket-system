@@ -10,18 +10,9 @@ const inputNumber = document.getElementById("input-number");
 const nextBtn = document.getElementById("next-btn");
 const couponInput = document.getElementById("coupon-input");
 const couponBtn = document.getElementById("coupon-btn");
-
-couponInput.addEventListener("input", (e) => {
-  // console.log(e.target.value);
-  if (couponInput.value === "NEW15") {
-    couponBtn.removeAttribute("disabled");
-  } else if (couponInput.value === "Couple 20") {
-    couponBtn.removeAttribute("disabled");
-  } else {
-    couponBtn.setAttribute("disabled", "");
-    return;
-  }
-});
+const appendDiscounts = document.getElementById("append-discounts");
+const discountElem = document.getElementById("d-discount");
+const discountPrice = document.getElementById("d-price");
 
 function seatFunctionality(seatButtons) {
   let seatCount = 40;
@@ -38,6 +29,40 @@ function seatFunctionality(seatButtons) {
           alert("you can only select/buy 4 tickets at once");
           return;
         }
+
+        couponInput.addEventListener("input", (e) => {
+          // console.log(e.target.value);
+          if (couponInput.value === "NEW15" && selected.length === 4) {
+            let discount = (priceCounter * 15) / 100;
+            couponBtn.addEventListener("click", () => {
+              // console.log(discount);
+              discountElem.style.display = "block";
+              discountPrice.textContent = discount;
+              let grandTotal = priceCounter - discount;
+              grandPrice.textContent = grandTotal;
+            });
+            couponBtn.removeAttribute("disabled");
+          } else if (
+            couponInput.value === "Couple 20" &&
+            selected.length <= 4
+          ) {
+            let discount = (priceCounter * 20) / 100;
+            couponBtn.addEventListener("click", () => {
+              // console.log(discount);
+              const h5 = document.createElement("h5");
+              h5.textContent = "discount";
+              appendDiscounts.appendChild(h5);
+              const h5Second = document.createElement("h5");
+              h5Second.textContent = discount;
+              appendDiscounts.appendChild(h5Second);
+            });
+
+            couponBtn.removeAttribute("disabled");
+          } else {
+            couponBtn.setAttribute("disabled", "");
+            return;
+          }
+        });
 
         inputNumber.addEventListener("input", (e) => {
           e.preventDefault();
