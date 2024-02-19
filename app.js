@@ -49,12 +49,10 @@ function seatFunctionality(seatButtons) {
             let discount = (priceCounter * 20) / 100;
             couponBtn.addEventListener("click", () => {
               // console.log(discount);
-              const h5 = document.createElement("h5");
-              h5.textContent = "discount";
-              appendDiscounts.appendChild(h5);
-              const h5Second = document.createElement("h5");
-              h5Second.textContent = discount;
-              appendDiscounts.appendChild(h5Second);
+              discountElem.style.display = "block";
+              discountPrice.textContent = discount;
+              let grandTotal = priceCounter - discount;
+              grandPrice.textContent = grandTotal;
             });
 
             couponBtn.removeAttribute("disabled");
