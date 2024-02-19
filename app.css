@@ -16,17 +16,7 @@
     font-style: normal;
 }
 
-/* header img */
-/* 
-.header-img {
-    filter: contrast(1.25);
-} */
-
-/* .header-card {
-    width: 19.25rem;
-    height: 8.625rem;
-    border-radius: 1.5rem;
-    background-color: #ffffff;
-    border-bottom-color: #1dd100;
-    border-bottom-width: 2px;
-} */
+.seat-selected {
+    background: #1dd100;
+    color: blue;
+}
