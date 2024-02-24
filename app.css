@@ -1,22 +1,26 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .raleway {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .inter {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .seat-selected {
-    background: #1dd100;
-    color: blue;
+  background: #1dd100;
+  color: blue;
+}
+
+.hovering:hover {
+  background-color: rgb(37, 37, 37);
 }
